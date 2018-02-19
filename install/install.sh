@@ -14,7 +14,7 @@ service mongod start
 mongoimport --db QAMDB --collection movies --file ./install/movies.json
 
 #Install node
-apt install -y node
+apt install -y nodejs
 
 #Install packages
 npm install
