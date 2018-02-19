@@ -15,9 +15,10 @@ mongoimport --db QAMDB --collection movies --file ./install/movies.json
 
 #Install node
 apt install -y nodejs
+apt install -y npm
 
 #Install packages
 npm install
 
 #Start API
-node index.js
+nodejs index.js
