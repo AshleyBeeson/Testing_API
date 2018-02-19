@@ -10,15 +10,15 @@ apt-get install -y mongodb-org
 apt-get install -y mongodb-org=3.6.2 mongodb-org-server=3.6.2 mongodb-org-shell=3.6.2 mongodb-org-mongos=3.6.2 mongodb-org-tools=3.6.2
 service mongod start
 
-#Add json Data
-mongoimport --db QAMDB --collection movies --file ./install/movies.json
-
 #Install node
 apt install -y nodejs
 apt install -y npm
 
 #Install packages
 npm install
+
+#Add json Data
+mongoimport --db QAMDB --collection movies --drop --jsonArray --file ./install/movies.json
 
 #Start API
 nodejs index.js
