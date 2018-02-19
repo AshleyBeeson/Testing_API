@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const restful = require("node-restful");
+const mongoose = restful.mongoose;
 
 // create ninja Schema & model
-const MovieSchema = new Schema({
+const MovieSchema = new mongoose.Schema({
     Title: {
         type: String,
         required: [true, 'title field is required']
@@ -54,6 +54,4 @@ const MovieSchema = new Schema({
     }
 });
 
-const Movie = mongoose.model('movie', MovieSchema);
-
-module.exports = Movie;
+module.exports = restful.model("movie", MovieSchema);

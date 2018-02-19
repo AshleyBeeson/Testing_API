@@ -18,7 +18,7 @@ apt install -y npm
 npm install
 
 #Add json Data
-mongoimport --db QAMDB --collection movies --drop --jsonArray --file ./install/movies.json
+mongoimport --db QAMDB --collection movies --drop --file ./install/movies.json
 
 #Start API
 nodejs index.js
